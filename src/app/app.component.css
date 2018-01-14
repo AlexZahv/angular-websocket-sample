@@ -1,0 +1,56 @@
+.chat-header {
+  margin: 10px 0 30px 0;
+  /*background-color: aqua;*/
+  display: inline-block;
+}
+
+.chat-header-btn-connect {
+  font-size: 14px;
+}
+
+.chat-header-label {
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+}
+
+.chat-body-dialog {
+  border: solid 1px black;
+  border-radius: 4px;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  border-bottom: none;
+}
+
+.chat-body-btn-panel {
+  padding: 3px 0 0 0;
+  border: black solid 1px;
+  border-top: none;
+}
+
+.chat-body-log {
+  margin-top: 20px;
+  /*border: solid 1px black;*/
+  border-radius: 2px;
+}
+
+.chat-body-log-line{
+  padding: 5px 0 5px 0;
+  color: green;
+  font-size: 10px;
+}
+
+.chat-body-dialog-line-author {
+  font-size: 16px;
+  color: red;
+  float: left;
+}
+
+.chat-body-dialog-line-message {
+  padding-left: 5px;
+  float: right;
+}
+
+.chat-body-dialog-line {
+  padding: 5px 5px 5px 0px;
+  display: inline-block;
+}

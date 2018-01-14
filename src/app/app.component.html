@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-4">
+      <div class="chat-header">
+        <div *ngIf="!connected">
+          <label class="chat-header-label">Press button to connect chat</label>
+          <input type="button" class="btn btn-success chat-header-btn-connect" value="Connect" (click)="connect()"/>
+        </div>
+        <div *ngIf="connected">
+          <label class="chat-header-label">Press button to disconnect</label>
+          <input type="button" class="btn btn-danger chat-header-btn-connect" value="Disconnect"
+                 (click)="disconnect()"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 chat-body-dialog">
+      <div *ngFor="let message of messages">
+        <div class="chat-body-dialog-line">
+          <div class="chat-body-dialog-line-author">
+            {{message.author}}
+          </div>
+          <div class="chat-body-dialog-line-message">
+            {{message.text}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 chat-body-btn-panel">
+      <div class="form-group">
+        <input class="form-control" type="text" value="Text of message" #messageText>
+        <input type="button" class="btn btn-success chat-header-btn-connect"
+               value="Send message" (click)="send(messageText.value)"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2 chat-body-log">
+      <div class="chat-body-log-line" *ngFor="let log of logs">
+        {{log}}
+      </div>
+    </div>
+  </div>
+</div>
